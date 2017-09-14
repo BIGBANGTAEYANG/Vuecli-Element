@@ -18,7 +18,7 @@ npm run build
 npm run build --report
 ```
 
-##项目启动后，首页是登录界面, 登录失败弹框提示，成功则跳转主页面
+## 项目启动后，首页是登录界面, 登录失败弹框提示，成功则跳转主页面
 
 ```javascript
       userlogin(){

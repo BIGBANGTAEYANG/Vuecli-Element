@@ -18,7 +18,7 @@ npm run build
 npm run build --report
 ```
 
-## 项目启动后，首页是登录界面, 登录失败弹框提示，成功则跳转主页面
+## 项目启动后，首页是登录界面, 登录失败弹框提示，成功则跳转主页面, 代码如下：
 
 ```javascript
       userlogin(){
@@ -41,5 +41,5 @@ npm run build --report
          });
       }
 ```
->效果图如下：<br> 
+## 效果图如下：
 >![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/login.png)     

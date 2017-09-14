@@ -41,5 +41,7 @@ npm run build --report
          });
       }
 ```
-## 效果图如下：
+## 登录失败效果图如下：
 >![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/login.png)     
+## 登录成功效果图如下：
+>![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/main.png)

@@ -82,5 +82,5 @@ npm run build --report
 ## 点击销售管理的周销售，异步加载table如下：
 >![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/table.png)
 ### 加载完成后，实现分页，以及编辑数据弹出dialog，效果如下：
->![]()
->![]()
+>![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/table2.png)
+>![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/edittable.png)

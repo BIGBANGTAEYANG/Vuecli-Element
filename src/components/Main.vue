@@ -1,5 +1,5 @@
 <template>
-      <div id="app">
+      <div id="main">
         <!-- 头部导航 -->
         <header class="header">
           <el-menu theme="dark"  class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true">
@@ -26,7 +26,7 @@
 
 <script>
     export default {
-      name: 'app',
+      name: 'main',
       data() {
         return {
           activeIndex: '1',

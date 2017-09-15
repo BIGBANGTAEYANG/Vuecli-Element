@@ -65,7 +65,6 @@
                     .catch((err)=>{
                         console.log(err);
                     })
-
             },
             drawBarChart() {
                 this.chartBar = echarts.init(document.getElementById('chartBar'));

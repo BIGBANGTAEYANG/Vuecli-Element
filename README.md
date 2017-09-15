@@ -45,3 +45,40 @@ npm run build --report
 >![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/login.png)     
 ## 登录成功效果图如下：
 >![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/main.png)
+### 登录成功后首页第一个图表是使用Echarts和axios异步数据加载而成，代码如下：
+```javascript
+ drawColumnChart() {
+                this.chartColumn = echarts.init(document.getElementById('chartColumn'));
+                //使用axios加载数据并且初始化图表
+                this.$axios.get('/api/getEchartData')
+                    .then((response)=>{
+                        var seriesdata = [];
+                        for ( var  i = 0;i<response.data.series.length;i++){
+                            var jsondata = {type:"",name:"",data:""};
+                            jsondata.type = response.data.series[i].type;
+                            jsondata.name = response.data.series[i].name;
+                            jsondata.data = response.data.series[i].data;
+                            seriesdata.push(jsondata);
+                        }
+                        this.chartColumn.setOption({
+                            title: { text: response.data.title.text },
+                            tooltip: {},
+                            xAxis: {
+                                type: response.data.categories.type,
+                                data: response.data.categories.data,
+                                axisTick:{
+                                    alignWithLabel:response.data.categories.axisTick.alignWithLabel
+                                }
+                            },
+                            yAxis: {},
+                            series: seriesdata
+                        });
+                    })
+                    .catch((err)=>{
+                        console.log(err);
+                    })
+            },
+```
+## 点击销售管理的周销售，异步加载table如下：
+>![]()
+

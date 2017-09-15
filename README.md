@@ -80,5 +80,5 @@ npm run build --report
             },
 ```
 ## 点击销售管理的周销售，异步加载table如下：
->![]()
+>![](https://github.com/BIGBANGTAEYANG/Vuecli-Element/blob/master/gitimage/table.png)
 

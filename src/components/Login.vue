@@ -28,7 +28,7 @@
       };
     },
     //页面渲染之前加载cookie
-    beforeMount(){
+    mounted(){
       if(getCookie('username')!=''&&getCookie('password')!=''){
         this.username=getCookie('username');
         this.password=getCookie('password');
@@ -43,7 +43,7 @@
             password:this.password
           })
           .then((response)=>{
-              if(response.data.result){
+              if(response.data.code=='200'){
                   this.$notify({title: '用户登录成功',message: '进入系统后台首页',type: 'success'});
                   if(this.checked==true){
                     //设置cookie

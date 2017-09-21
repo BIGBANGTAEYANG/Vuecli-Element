@@ -101,7 +101,7 @@
         console.log(row)
       }
     },
-    beforeUpdate(){
+    mounted(){
       this.$axios.get('/api/getTableData')
         .then((response)=>{
           if(response.data!=null){

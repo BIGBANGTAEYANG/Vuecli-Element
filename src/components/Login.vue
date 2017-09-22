@@ -43,7 +43,6 @@
             password:this.password
           })
           .then((response)=>{
-            console.log(response)
               if(response.data.code=='200'){
                   this.$notify({title: '用户登录成功',message: '进入系统后台首页',type: 'success'});
                   if(this.checked==true){
@@ -53,7 +52,6 @@
                   }
                   
                   setTimeout(function(){
-                    console.log(this);
                     this.$router.push('/main/index');
                   }.bind(this),1000)
 

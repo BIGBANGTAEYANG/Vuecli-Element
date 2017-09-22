@@ -10,6 +10,7 @@ import SellMonth from '@/components/Sell/SellMonth'
 import UserInfo from '@/components/Main/UserInfo'
 import Login from '@/components/Login'
 import Main from '@/components/Main'
+import BrandStock from '@/components/Stock/BrandStock'
 
 Vue.use(Router)
 
@@ -28,7 +29,11 @@ export default new Router({
           ]
         },
         { path: 'index',component: MainIndex },
-        { path: 'stock', component: Stock },
+        { path: 'stock', component: Stock,
+          children:[
+            {path:'brand',component:BrandStock}
+          ] 
+        },
         { path: 'customer', component: Customer },
         { path: 'employee', component: Employee },
         { path: 'userinfo', component: UserInfo }

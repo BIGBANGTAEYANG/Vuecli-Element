@@ -61,7 +61,7 @@
 
 
       <!--弹出dialog-->
-      <el-dialog title="添加库存" :visible.sync="dialogFormVisible" :style="{width:'1200px'}" :before-close="opendialog">
+      <el-dialog title="添加库存" :visible.sync="dialogFormVisible" :style="{width:'1200px'}" :before-close="handleClose">
           <el-form  label-width="80px">
             <el-form-item label="货品名称" prop="stockproductname">
               <el-input v-model="stockform.productname"></el-input>
@@ -162,11 +162,11 @@
           this.stockform.selectedOptions = [];
         },
 
-        //打开dialog的回调
-        opendialog(done){
+        //关闭dialog的回调函数
+        handleClose(done){
           this.$confirm('确认关闭吗')
             .then(_=>{
-              clearform();
+              this.clearform();
               done();
             })
             .catch(_=>{})
@@ -175,6 +175,7 @@
         //下拉框选中事件
         handleChange(value) {
           this.selectedOptions = value;
+          alert(this.selectedOptions);
         },
 
         //添加库存
